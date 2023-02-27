@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    
+    <title>Dragon 🐲</title>
+    <script>
+        function aleatorio(min,max){
+        return Math.floor(Math.random() * (max - min + 1) + min)
+        }
+        let jugador=0
+        let pc= aleatorio(1,5)
+        jugador=prompt("Elige 1 para piedra, 2 para papel,3 para tijera")
+        //Elección del jugador
+
+  if(jugador == 1) {
+    alert("Elegiste 🥌")
+  }else if (jugador == 2) {
+    alert("Elegiste 📋")
+  }else if (jugador == 3) {
+    alert("Elegiste ✂️")
+  }else if (jugador == 4) {
+    alert("Elegiste 🦎")
+  }else if (jugador == 5) {
+    alert("Elegiste 🖖")
+  } else {
+    alert("Elegiste 👹")
+  }
+
+  //Elección del ordenador
+
+  if (pc == 1){
+    alert("El ordenador eligió 🥌")
+  }else if (pc == 2){
+    alert("El ordenador eligió 📋")
+  }else if(pc == 3){
+    alert("El ordenador eligió ✂️")
+  }else if (pc == 4) {
+    alert("El ordenador eligió 🦎")
+  }else if (pc == 5) {
+    alert("El ordenador eligió 🖖")
+  }
+
+  //Combate
+
+  if(pc==jugador){
+    alert("Empate")
+    resultado="empate"
+  } else if (jugador == 3 && pc == 2 || jugador == 2 && pc == 1 || jugador == 1 && pc == 4 || jugador == 4 && pc == 5 || jugador == 5 && pc == 3 || jugador == 3 && pc == 4 || jugador == 4 && pc == 2 ||  jugador == 2 && pc == 5 || jugador == 5 && pc == 1 || jugador == 1 && pc == 3) {
+    alert("GANASTE")
+    resultado = "victoria"
+  } else {
+    alert("PERDISTE")
+    resultado = "derrota"
+  }
+
+    </script>
+</head>
+<body>
+    <h1>PIEDRA</h1>
+    
+</body>
+</html>
